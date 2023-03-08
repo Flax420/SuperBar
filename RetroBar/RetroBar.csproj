@@ -42,6 +42,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Themes\Windows 7 Aero.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="gong-wpf-dragdrop" Version="3.1.1" />
     <PackageReference Include="ManagedShell" Version="0.0.200" />
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
@@ -71,6 +75,9 @@
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Themes\Windows 7 Aero.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
 
