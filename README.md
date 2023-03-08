@@ -1,5 +1,3 @@
-﻿![alt text](https://raw.githubusercontent.com/dremin/retrobar/master/retrobar-preview.png "RetroBar")
-
 # SuperBar
 
 SuperBar is a fork of RetroBar which is based on the [ManagedShell](https://github.com/cairoshell/ManagedShell) library for great compatibility and performance.
