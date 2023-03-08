@@ -1,11 +1,9 @@
 ﻿![alt text](https://raw.githubusercontent.com/dremin/retrobar/master/retrobar-preview.png "RetroBar")
 
-# RetroBar
+# SuperBar
 [![Current release](https://img.shields.io/github/v/release/dremin/RetroBar)](https://github.com/dremin/RetroBar/releases/latest) ![Build status](https://github.com/dremin/RetroBar/workflows/RetroBar/badge.svg)
 
-Pining for simpler times? RetroBar teleports you back in time by replacing your modern Windows taskbar with the classic Windows 95, 98, Me, 2000, XP, or Vista style.
-
-RetroBar is based on the [ManagedShell](https://github.com/cairoshell/ManagedShell) library for great compatibility and performance.
+SuperBar is a fork of RetroBar which is based on the [ManagedShell](https://github.com/cairoshell/ManagedShell) library for great compatibility and performance.
 
 ## Requirements
 - Windows 7 SP1, Windows 8.1, Windows 10, or Windows 11
@@ -75,10 +73,10 @@ RetroBar is based on the [ManagedShell](https://github.com/cairoshell/ManagedShe
 - Vietnamese (Tiếng Việt)
 
 ## Custom languages and themes
-RetroBar supports custom languages and themes. To use custom languages or themes, create a `Languages` or a `Themes` directory and place valid `.xaml` language or theme files there.
+SuperBar supports custom languages and themes. To use custom languages or themes, create a `Languages` or a `Themes` directory and place valid `.xaml` language or theme files there.
 
 Valid locations to create a `Languages` or a `Themes` directory:
-- In the same directory as `RetroBar.exe`
-- In `%localappdata%\RetroBar`
+- In the same directory as `SuperBar.exe`
+- In `%localappdata%\SuperBar`
 
-Themes use the XAML `ResourceDictionary` format. [View the included example themes](https://github.com/dremin/RetroBar/tree/master/RetroBar/Themes) to get started.
+Themes use the XAML `ResourceDictionary` format. [View the included example themes](https://github.com/brunobits/SuperBar/tree/master/RetroBar/Themes) to get started.
