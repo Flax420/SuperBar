@@ -14,8 +14,6 @@
     <SolidColorBrush x:Key="TaskbarWindowBackground" Color="Transparent" />
     <SolidColorBrush x:Key="TaskbarTopBorder" Color="#9a000000" />
     <SolidColorBrush x:Key="TaskbarTopInnerBorder" Color="#67ffffff" />
-    <SolidColorBrush x:Key="TaskbarBottomInnerBorder" Color="#c2000000" />
-    <SolidColorBrush x:Key="TaskbarBottomBorder" Color="#f7000000" />
     <SolidColorBrush x:Key="TaskbarVerticalTopBorder" Color="#e5474747" />
     <SolidColorBrush x:Key="TaskbarVerticalTopInnerBorder" Color="#e59e9e9e" />
     <SolidColorBrush x:Key="TaskbarVerticalBottomInnerBorder" Color="#c2000000" />
@@ -67,25 +65,59 @@
 
     <!-- TaskButton -->
     <LinearGradientBrush x:Key="TaskButtonOuterBorder"
-                         StartPoint="0,0"
-                         EndPoint="1,0">
-        <GradientStop Color="#c000"
-                      Offset="0.3" />
-        <GradientStop Color="#95000000"
-                      Offset="1" />
+                         StartPoint="1.0,0.0"
+                         EndPoint="0,0">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.5"
+                                CenterX="0.5"/>
+                <SkewTransform AngleX="-45"
+                               CenterX="0.5"
+                               CenterY="0.5"
+                               AngleY="0"/>
+                <RotateTransform CenterX="0.5"
+                                 CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+
+        <GradientStop Color="#CB000000"
+                      Offset="1.25" />
+        <GradientStop Color="#66000000"
+                      Offset="0.5" />
+        <GradientStop Color="#98202020"
+                      Offset="0.25" />
     </LinearGradientBrush>
+
     <LinearGradientBrush x:Key="TaskButtonInnerBorder"
-                         StartPoint="0,0"
-                         EndPoint="1,0">
-        <GradientStop Color="#d3ffffff"
+                         StartPoint="1.0,0.0"
+                         EndPoint="0,0">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.5"
+                                CenterX="0.5"/>
+                <SkewTransform AngleX="-45"
+                               CenterX="0.5"
+                               CenterY="0.5"
+                               AngleY="0"/>
+                <RotateTransform CenterX="0.5"
+                                 CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+
+        <GradientStop Color="#d4ffffff"
+                      Offset="1.25" />
+        <GradientStop Color="#5AFFFFFF"
+                      Offset="0.5" />
+        <GradientStop Color="#8fffffff"
                       Offset="0.3" />
-        <GradientStop Color="#8BFFFFFF"
-                      Offset="1" />
     </LinearGradientBrush>
-    
-    <SolidColorBrush x:Key="TaskButtonInnerTopRightBorder" Color="#1effffff" />
-    <SolidColorBrush x:Key="TaskButtonInnerBottomLeftBorder" Color="#1effffff" />
-    <SolidColorBrush x:Key="TaskButtonBackground" Color="#15ffffff" />
+
+    <ImageBrush x:Key="TaskButtonBackground"
+                ImageSource="../Resources/w7aero/TaskButton_Open.png"
+                ViewboxUnits="RelativeToBoundingBox"/>
+
     <!-- TaskButton / -->
 
     <!-- TaskButtonHover -->
@@ -106,17 +138,6 @@
                       Offset="1" />
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="TaskButtonInnerTopRightBorderHover" Color="#1effffff" />
-    <LinearGradientBrush x:Key="TaskButtonInnerBottomLeftBorderHover"
-                         StartPoint="0,0"
-                         EndPoint="1,0">
-        <GradientStop Color="#77404f6f"
-                      Offset="0.0" />
-        <GradientStop Color="#f94dd7e1"
-                      Offset="0.5" />
-        <GradientStop Color="#77404f6f"
-                      Offset="1.0" />
-    </LinearGradientBrush>
     <LinearGradientBrush x:Key="TaskButtonBackgroundHover"
                          StartPoint="0,0"
                          EndPoint="0,1">
@@ -140,25 +161,59 @@
 
     <!-- TaskButtonActive -->
     <LinearGradientBrush x:Key="TaskButtonOuterBorderActive"
-                         StartPoint="0,0"
-                         EndPoint="1,0">
-        <GradientStop Color="#c000"
-                      Offset="0.3" />
-        <GradientStop Color="#95000000"
-                      Offset="1" />
+                         StartPoint="1.0,0.0"
+                         EndPoint="0,0">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.5"
+                                CenterX="0.5"/>
+                <SkewTransform AngleX="-45"
+                               CenterX="0.5"
+                               CenterY="0.5"
+                               AngleY="0"/>
+                <RotateTransform CenterX="0.5"
+                                 CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+
+        <GradientStop Color="#CB000000"
+                      Offset="1.25" />
+        <GradientStop Color="#66000000"
+                      Offset="0.5" />
+        <GradientStop Color="#98202020"
+                      Offset="0.25" />
     </LinearGradientBrush>
+
     <LinearGradientBrush x:Key="TaskButtonInnerBorderActive"
-                         StartPoint="0,0"
-                         EndPoint="1,0">
-        <GradientStop Color="#d4ffffff"
+                         StartPoint="1.0,0.0"
+                         EndPoint="0,0">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.5"
+                                CenterX="0.5"/>
+                <SkewTransform AngleX="-45"
+                               CenterX="0.5"
+                               CenterY="0.5"
+                               AngleY="0"/>
+                <RotateTransform CenterX="0.5"
+                                 CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+
+        <GradientStop Color="#ffffff"
+                      Offset="1.25" />
+        <GradientStop Color="#D7FFFFFF"
+                      Offset="0.5" />
+        <GradientStop Color="#e8ffffff"
                       Offset="0.3" />
-        <GradientStop Color="#8BFFFFFF"
-                      Offset="1" />
     </LinearGradientBrush>
     
-    <SolidColorBrush x:Key="TaskButtonInnerTopRightBorderActive" Color="#49000000" />
-    <SolidColorBrush x:Key="TaskButtonInnerBottomLeftBorderActive" Color="Transparent" />
-    <SolidColorBrush x:Key="TaskButtonBackgroundActive" Color="#5effffff" />
+    <ImageBrush x:Key="TaskButtonBackgroundActive"
+                ImageSource="../Resources/w7aero/TaskButton_Active.png"
+                ViewboxUnits="RelativeToBoundingBox"/>
+    
     <RadialGradientBrush x:Key="TaskButtonBottomBackgroundActiveHover"
                          GradientOrigin="0.5,1.2"
                          RadiusX="0.8"
@@ -182,17 +237,6 @@
 
     <SolidColorBrush x:Key="TaskButtonOuterBorderFlashing" Color="#40ffffff" />
     <SolidColorBrush x:Key="TaskButtonInnerBorderFlashing" Color="#5f000000" />
-    <SolidColorBrush x:Key="TaskButtonInnerTopRightBorderFlashing" Color="#1effffff" />
-    <LinearGradientBrush x:Key="TaskButtonInnerBottomLeftBorderFlashing"
-                         StartPoint="0,0"
-                         EndPoint="1,0">
-        <GradientStop Color="#ccca662a"
-                      Offset="0.0" />
-        <GradientStop Color="#f9e2cb43"
-                      Offset="0.5" />
-        <GradientStop Color="#ccca662a"
-                      Offset="1.0" />
-    </LinearGradientBrush>
     <LinearGradientBrush x:Key="TaskButtonBackgroundFlashing"
                          StartPoint="0,0"
                          EndPoint="0,1">
@@ -347,11 +391,11 @@
     </LinearGradientBrush>
 
     <BitmapImage x:Key="StartButtonImageBottom"
-                 UriSource="../Resources/start7button.png" />
+                 UriSource="../Resources/w7aero/StartButton.png" />
     <BitmapImage x:Key="StartButtonImageTop"
-                 UriSource="../Resources/start7button.png" />
+                 UriSource="../Resources/w7aero/StartButton.png" />
     <BitmapImage x:Key="StartButtonImageLarge"
-                 UriSource="../Resources/start7button.png" />
+                 UriSource="../Resources/w7aero/StartButton.png" />
 
     <Style TargetType="MenuItem"
            x:Key="TaskManMenuItem">
@@ -406,18 +450,10 @@
                             x:Name="TaskbarTopBorder">
                         <Border BorderThickness="0,1,0,0"
                                 BorderBrush="{DynamicResource TaskbarTopInnerBorder}"
+                                Background="{DynamicResource TaskbarBackground}"
                                 x:Name="TaskbarTopInnerBorder">
-                            <Border BorderThickness="0,0,0,1"
-                                    BorderBrush="{DynamicResource TaskbarBottomBorder}"
-                                    x:Name="TaskbarBottomBorder">
-                                <Border BorderThickness="0,0,0,1"
-                                        BorderBrush="{DynamicResource TaskbarBottomInnerBorder}"
-                                        Background="{DynamicResource TaskbarBackground}"
-                                        x:Name="TaskbarBottomInnerBorder">
-                                    <ContentPresenter Margin="0,-2,0,-2"
-                                                      Name="Content" />
-                                </Border>
-                            </Border>
+                            <ContentPresenter Margin="0,-2,0,0"
+                                              Name="Content" />
                         </Border>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -430,30 +466,15 @@
                                 <Setter TargetName="TaskbarTopInnerBorder"
                                         Property="BorderBrush"
                                         Value="{DynamicResource TaskbarVerticalTopInnerBorder}" />
-                                <Setter TargetName="TaskbarBottomBorder"
-                                        Property="BorderBrush"
-                                        Value="{DynamicResource TaskbarVerticalBottomBorder}" />
-                                <Setter TargetName="TaskbarBottomInnerBorder"
-                                        Property="BorderBrush"
-                                        Value="{DynamicResource TaskbarVerticalBottomInnerBorder}" />
-                                <Setter TargetName="TaskbarBottomInnerBorder"
-                                        Property="Background"
-                                        Value="{DynamicResource TaskbarVerticalBackground}" />
-                                <Setter TargetName="TaskbarBottomBorder"
-                                        Property="BorderThickness"
-                                        Value="0,0,1,0" />
                                 <Setter TargetName="TaskbarTopBorder"
                                         Property="BorderThickness"
                                         Value="1,0,0,0" />
                                 <Setter TargetName="TaskbarTopInnerBorder"
                                         Property="BorderThickness"
                                         Value="1,0,0,0" />
-                                <Setter TargetName="TaskbarBottomInnerBorder"
-                                        Property="BorderThickness"
-                                        Value="0,0,1,0" />
                                 <Setter TargetName="Content"
                                         Property="Margin"
-                                        Value="-2,0,-2,0" />
+                                        Value="0,-2,0,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -484,7 +505,7 @@
                                         Value="2,7,2,0" />
                                 <Setter TargetName="Content"
                                         Property="Margin"
-                                        Value="0,0,0,6" />
+                                        Value="0,-2,0,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -500,29 +521,19 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="Transparent"
-                            Padding="0,1,0,1"
+                            Padding="0,0,0,0"
                             Name="ButtonBorder">
                         <Border BorderThickness="1"
                                 BorderBrush="{DynamicResource TaskButtonOuterBorder}"
-                                CornerRadius="2"
+                                CornerRadius="3"
                                 x:Name="ButtonOuterBorder">
                             <Border BorderThickness="1"
                                     BorderBrush="{DynamicResource TaskButtonInnerBorder}"
                                     Background="{DynamicResource TaskButtonBackground}"
-                                    CornerRadius="2"
+                                    CornerRadius="3"
                                     x:Name="ButtonInnerBorder">
-                                <Border BorderThickness="0,1,1,0"
-                                        BorderBrush="{DynamicResource TaskButtonInnerTopRightBorder}"
-                                        CornerRadius="2"
-                                        x:Name="ButtonInnerTopRightBorder">
-                                    <Border BorderThickness="1,0,0,1"
-                                            BorderBrush="{DynamicResource TaskButtonInnerBottomLeftBorder}"
-                                            CornerRadius="2"
-                                            x:Name="ButtonInnerBottomLeftBorder">
-                                        <ContentPresenter Margin="6,3"
-                                                          x:Name="Content" />
-                                    </Border>
-                                </Border>
+                                <ContentPresenter Margin="10,5"
+                                                  x:Name="Content" />
                             </Border>
                         </Border>
                     </Border>
@@ -543,24 +554,12 @@
                             <Setter TargetName="ButtonInnerBorder"
                                     Property="BorderBrush"
                                     Value="{DynamicResource TaskButtonInnerBorderHover}" />
-                            <Setter TargetName="ButtonInnerTopRightBorder"
-                                    Property="BorderBrush"
-                                    Value="{DynamicResource TaskButtonInnerTopRightBorderHover}" />
-                            <Setter TargetName="ButtonInnerBottomLeftBorder"
-                                    Property="BorderBrush"
-                                    Value="{DynamicResource TaskButtonInnerBottomLeftBorderHover}" />
                             <Setter TargetName="ButtonInnerBorder"
                                     Property="Background"
                                     Value="{DynamicResource TaskButtonBackgroundHover}" />
                             <Setter TargetName="ButtonOuterBorder"
                                     Property="Background"
                                     Value="{DynamicResource TaskButtonBottomBackgroundHover}" />
-                            <Setter TargetName="ButtonInnerTopRightBorder"
-                                    Property="BorderThickness"
-                                    Value="1,1,1,0" />
-                            <Setter TargetName="ButtonInnerBottomLeftBorder"
-                                    Property="BorderThickness"
-                                    Value="0,0,0,1" />
                         </Trigger>
                         <Trigger Property="IsPressed"
                                  Value="True">
@@ -572,12 +571,6 @@
                             <Setter TargetName="ButtonInnerBorder"
                                     Property="BorderBrush"
                                     Value="{DynamicResource TaskButtonInnerBorderActive}" />
-                            <Setter TargetName="ButtonInnerTopRightBorder"
-                                    Property="BorderBrush"
-                                    Value="{DynamicResource TaskButtonInnerTopRightBorderActive}" />
-                            <Setter TargetName="ButtonInnerBottomLeftBorder"
-                                    Property="BorderBrush"
-                                    Value="{DynamicResource TaskButtonInnerBottomLeftBorderActive}" />
                             <Setter TargetName="ButtonInnerBorder"
                                     Property="Background"
                                     Value="{DynamicResource TaskButtonBackgroundActive}" />
@@ -585,8 +578,8 @@
                                     Property="Background"
                                     Value="Transparent" />
                             <Setter TargetName="Content"
-                                    Property="Margin"
-                                    Value="7,4,5,2" />
+                                        Property="Margin"
+                                        Value="11,4" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -603,29 +596,19 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="Transparent"
-                            Padding="0,1,0,1"
+                            Padding="0,0,0,0"
                             Name="ButtonBorder">
                         <Border BorderThickness="1"
                                 BorderBrush="{DynamicResource TaskButtonOuterBorderActive}"
-                                CornerRadius="2"
+                                CornerRadius="3"
                                 x:Name="ButtonOuterBorder">
                             <Border BorderThickness="1"
                                     BorderBrush="{DynamicResource TaskButtonInnerBorderActive}"
                                     Background="{DynamicResource TaskButtonBackgroundActive}"
-                                    CornerRadius="2"
+                                    CornerRadius="3"
                                     x:Name="ButtonInnerBorder">
-                                <Border BorderThickness="0,1,1,0"
-                                        BorderBrush="{DynamicResource TaskButtonInnerTopRightBorderActive}"
-                                        CornerRadius="0,3,0,0"
-                                        x:Name="ButtonInnerTopRightBorder">
-                                    <Border BorderThickness="1,0,0,1"
-                                            BorderBrush="{DynamicResource TaskButtonInnerBottomLeftBorderActive}"
-                                            CornerRadius="2"
-                                            x:Name="ButtonInnerBottomLeftBorder">
-                                        <ContentPresenter Margin="7,4,5,2"
-                                                          x:Name="Content" />
-                                    </Border>
-                                </Border>
+                                <ContentPresenter Margin="10,5"
+                                                  x:Name="Content" />
                             </Border>
                         </Border>
                     </Border>
@@ -643,9 +626,6 @@
                             <Setter TargetName="ButtonInnerBorder"
                                     Property="Background"
                                     Value="{DynamicResource TaskButtonBackgroundActiveHover}" />
-                            <Setter TargetName="ButtonInnerTopRightBorder"
-                                    Property="Background"
-                                    Value="{DynamicResource TaskButtonBottomBackgroundActiveHover}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -660,30 +640,20 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="Transparent"
-                            Padding="0,1,0,1"
+                            Padding="0,0,0,0"
                             Name="ButtonBorder">
                         <Border BorderThickness="1"
                                 BorderBrush="{DynamicResource TaskButtonOuterBorderFlashing}"
                                     Background="{DynamicResource TaskButtonBottomBackgroundFlashing}"
-                                CornerRadius="2"
+                                CornerRadius="3"
                                 x:Name="ButtonOuterBorder">
                             <Border BorderThickness="1"
                                     BorderBrush="{DynamicResource TaskButtonInnerBorderFlashing}"
                                     Background="{DynamicResource TaskButtonBackgroundFlashing}"
-                                    CornerRadius="2"
+                                    CornerRadius="3"
                                     x:Name="ButtonInnerBorder">
-                                <Border BorderThickness="1,1,1,0"
-                                        BorderBrush="{DynamicResource TaskButtonInnerTopRightBorderFlashing}"
-                                        CornerRadius="2"
-                                        x:Name="ButtonInnerTopRightBorder">
-                                    <Border BorderThickness="0,0,0,1"
-                                            BorderBrush="{DynamicResource TaskButtonInnerBottomLeftBorderFlashing}"
-                                            CornerRadius="2"
-                                            x:Name="ButtonInnerBottomLeftBorder">
-                                        <ContentPresenter Margin="6,3"
-                                                          x:Name="Content" />
-                                    </Border>
-                                </Border>
+                                <ContentPresenter Margin="10,5"
+                                                  x:Name="Content" />
                             </Border>
                         </Border>
                     </Border>
@@ -702,7 +672,7 @@
                                     Value="{DynamicResource ButtonPressedForeground}" />
                             <Setter TargetName="Content"
                                     Property="Margin"
-                                    Value="7,4,5,2" />
+                                    Value="11,4" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -1271,9 +1241,6 @@
                             <Setter TargetName="ButtonInnerBorder"
                                     Property="BorderBrush"
                                     Value="{DynamicResource TaskButtonInnerBorderActive}" />
-                            <Setter TargetName="ButtonInnerTopLeftRightBorder"
-                                    Property="BorderBrush"
-                                    Value="{DynamicResource TaskButtonInnerTopRightBorderActive}" />
                             <Setter TargetName="ButtonInnerBottomBorder"
                                     Property="BorderBrush"
                                     Value="Transparent" />
