@@ -8,6 +8,11 @@
     <system:Boolean x:Key="UseFloatingStartButton">True</system:Boolean>
     <Thickness x:Key="TaskButtonMargin" Right="2" />
 
+    <ImageBrush x:Key="TaskbarTextureBackground"
+                ImageSource="../Resources/w7aero/Reflections.png"
+                Stretch="UniformToFill"
+                AlignmentX="Center"
+                AlignmentY="Bottom"/>
     <SolidColorBrush x:Key="TaskbarBackground" Color="#3a000000" />
     <SolidColorBrush x:Key="TaskbarVerticalBackground" Color="#3a000000" />
 
@@ -536,12 +541,15 @@
                     <Border BorderThickness="0,1,0,0"
                             BorderBrush="{DynamicResource TaskbarTopBorder}"
                             x:Name="TaskbarTopBorder">
-                        <Border BorderThickness="0,1,0,0"
+                        <Border BorderThickness="0,0,0,0"
+                                Background="{DynamicResource TaskbarTextureBackground}">
+                            <Border BorderThickness="0,1,0,0"
                                 BorderBrush="{DynamicResource TaskbarTopInnerBorder}"
                                 Background="{DynamicResource TaskbarBackground}"
                                 x:Name="TaskbarTopInnerBorder">
-                            <ContentPresenter Margin="0,-2,0,0"
+                                <ContentPresenter Margin="0,-2,0,0"
                                               Name="Content" />
+                            </Border>
                         </Border>
                     </Border>
                     <ControlTemplate.Triggers>
